@@ -209,6 +209,23 @@ width: calc(33.333% - 20px);
   }
     
 }
+.worp {
+    background: linear-gradient(135deg, #1a90df, #1900f8);
+    border-radius: 10px;
+    width: 0;
+    color:#fff;
+    animation: htmll 5s ease forwards;
+}
+
+
+@keyframes worp {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%; 
+  }
+}
 
 .skill-item:hover {
 transform: translateY(-10px);
