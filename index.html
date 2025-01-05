@@ -3,321 +3,125 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alireza JZ</title>
-<style>
-body, html {
-    margin: 0;
-padding: 0;
-height: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: #000;
-font-family: 'Arial', sans-serif;
-overflow: hidden;
-}
-#gradient-background {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: linear-gradient(45deg, #3498db, #8e44ad, #3498db, #8e44ad);
-background-size: 400% 400%;
-animation: gradientBG 15s ease infinite;
-}
-#particles-container {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-}
-.content {
-position: relative;
-z-index: 1;
-color: white;
-text-align: center;
-padding: 20px;
-align-items: center;
-}
-@keyframes gradientBG {
-0% {
-background-position: 0% 50%;
-}
-50% {
-background-position: 100% 50%;
-}
-100% {
-background-position: 0% 50%;
-}
-}
+<title>AlirezA JZ</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-.neon-text {
-font-size: 48px;
-font-weight: bold;
-color: #fff;
-text-shadow: 
-0 0 5px #000000,
-0 0 10px #000000,
-0 0 20px #020202,
-0 0 40px  rgb(0, 183, 255),
-0 0 80px  rgb(0, 183, 255),
-0 0 90px  rgb(0, 183, 255),
-0 0 100px  rgb(0, 183, 255),
-0 0 150px rgb(0, 183, 255);
-/* animation: pulsate 2.5s infinite alternate; */
-}
-@keyframes pulsate {
-100% {
-text-shadow: 
-0 0 5px #fff,
-0 0 10px #fff,
-0 0 20px #fff,
-0 0 40px #0af,
-0 0 80px #0af,
-0 0 90px #0af,
-0 0 100px #0af,
-0 0 150px #0af;
-}
-0% {
-text-shadow: 
-0 0 2px #fff,
-0 0 4px #fff,
-0 0 6px #fff,
-0 0 10px #0af,
-0 0 45px #0af,
-0 0 55px #0af,
-0 0 70px #0af,
-0 0 80px #0af;
-}
-}
-.loading-bar {
-width: 300px;
-height: 20px;
-background-color: #111;
-border-radius: 10px;
-overflow: hidden;
-position: relative;
-margin-top: 20px;
-box-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
-}
-.progress {
-width: 0%;
-height: 100%;
-background: linear-gradient(90deg, #00f, #0af);
-border-radius: 10px;
-transition: width 0.5s ease;
-position: relative;
-overflow: hidden;
-}
-.progress::before {
-content: '';
-position: absolute;
-top: 0;
-left: -50%;
-width: 50%;
-height: 100%;
-background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-animation: shine 1.5s infinite;
-}
-.percentage {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-color: #fff;
-font-size: 14px;
-font-weight: bold;
-text-shadow: 0 0 5px rgba(0, 170, 255, 0.8);
-}
-@keyframes shine {
-0% { left: -50%; }
-100% { left: 150%; }
-}
-.particles {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-pointer-events: none;
-}
-.particle {
-position: absolute;
-background-color: rgba(0, 170, 255, 0.6);
-border-radius: 50%;
-animation: float 3s infinite ease-in-out;
-}
-@keyframes float {
-0%, 100% { transform: translateY(0); }
-50% { transform: translateY(-20px); }
-}   
-</style>
 </head>
 <body>
-<div id="gradient-background"></div>
-<div id="particles-container"></div>
- <div class="content">
-<div class="neon-text">Alireza JZ</div>
-<div class="loading-bar">
-<div class="progress"></div>
-<div class="percentage">0%</div>
-</div>
-</div>
 
+    
+    <div id="particles-container"></div>
+
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        section{
+            scroll-margin-top: 7rem;
+        }
+    </style>
+<header>
+<nav>
+<ul>
+    <li><a href="#home"><span class="text">خانه</span> <i class="fas fa-home icon"></i></a></li>
+    <li><a href="#skills"><span class="text">درباره من</span> <i class="fas fa-user icon"></i></a></li>
+    <li><a href="#projects"><span class="text">پروژه‌ها</span> <i class="fas fa-file icon"></i></a></li>
+    <li><a href="#contact"><span class="text">ارتباط</span> <i class="fas fa-phone icon"></i></a></li>
+</ul>
+</nav>
+</header>
+
+<section id="home" class="hero">
+<div class="container">
+<img class="log" src="logojz.png">
+<h1>AliRezA JZ</h1>
+<p>توسعه دهنده و طراح سایت</p>
+</div>
+</section>
+
+<section id="skills" class="section">
+<div class="container">
+<h2>درباره من</h2>
+<h4>سلام من علیرضا ج-زد (JZ) هستم. متولد اردیبهشت 1379 . دارای مدرک لیسانس نرم افزار کامپیوتر</h4>
+<h2>مهارت‌های من</h2>
+<div class="skills-container">
+<div class="skill-item">
+<h3>HTML5 </h3>
+<h3 class="htmll" id="html5-progress">85%</h3>
+</div>
+<div class="skill-item">
+<h3 >CSS3</h3>
+<h3 class="csss" >50%</h3>
+</div>
+<div class="skill-item">
+<h3 >JavaScript</h3>
+<h3 class="jaa" >20%</h3>
+</div>
+</div>
+</div>
+</section>
+
+<section id="projects" class="section">
+<div class="container">
+<h2>پروژه‌های من</h2>
+<div class="projects-container">
+<a href="porj1/index.html"><div class="project-item">
+<img src="img/login.JPG" alt="پروژه 1">
+<div class="project-info">
+<h3>پروژه 1</h3>
+<p>صفحه ورود و ثبت نام (login & sign up)</p>
+</div>
+</div></a>
+<a href="porj2/lod.html"><div class="project-item">
+<img src="img/bmi.JPG" alt="پروژه 2">
+<div class="project-info">
+<h3>پروژه 2</h3>
+<p>بدست اوردن شاخص توده بدنی (bmi) </p>
+</div>
+</div></a>
+<a href="porj3/index.html"><div class="project-item">
+<img  src="img/profile.JPG"   alt="پروژه 3">
+<div class="project-info">
+<h3>پروژه 3</h3>
+<p>مشخصات شخصی به صورت کارت (card profile)</p>
+</div>
+</div></a>
+</di>
+</div>
+</section>
+
+<section id="contact" class="section">
+<div class="container">
+<h2>تماس با من</h2>
+<form class="contact-form">
+<input type="text" placeholder="نام" required>
+<input type="email" placeholder="ایمیل" required>
+<textarea placeholder="پیام شما" rows="5" required></textarea>
+<a href="http://" target="_blank" rel="noopener noreferrer"></a><button type="submit">ارسال پیام</button>
+<p class="pppp">راه های دیگر ارتباط با من </p>
+<div class="social-icons">
+   
+    <a href="https://t.me/Alirezajz_web" target="_blank" class="social-icon telegram">
+    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/6.15.0/telegram.svg" alt="Telegram">
+    </a>
+    <a href="https://www.linkedin.com/in/alireza-jz" target="_blank" rel="noopener noreferrer" class="social-icon linkedin">
+    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/6.15.0/linkedin.svg" alt="linkedin">
+    </a>
+    <a href="https://www.instagram.com/alirezajz_web" target="_blank" class="social-icon instagram">
+    <img src="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/6.15.0/instagram.svg" alt="Instagram">
+    </a>
+    </div>
+</form>
+</div>
+</section>
+
+<footer>
+<p>تمامی حقوق این محتوا برای سال 2024 محفوظ است. هرگونه کپی‌ برداری بدون مجوز ممنوع می‌باشد. باتشکر &copy;JZ</p>
+</footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-<script>
-particlesJS("particles-container", {
-"particles": {
-"number": {
-"value": 80,
-"density": {
-"enable": true,
-"value_area": 800
-}
-},
-"color": {
-"value": "#ffffff"
-},
-"shape": {
-"type": "circle",
-"stroke": {
-"width": 0,
-"color": "#000000"
-},
-"polygon": {
-"nb_sides": 5
-}
-},
-"opacity": {
-"value": 0.5,
-"random": false,
-"anim": {
-"enable": false,
-"speed": 1,
-"opacity_min": 0.1,
-"sync": false
-}
-},
-"size": {
-"value": 3,
-"random": true,
-"anim": {
-"enable": false,
-"speed": 40,
-"size_min": 0.1,
-"sync": false
-}
-},
-"line_linked": {
-"enable": true,
-"distance": 150,
-"color": "#ffffff",
-"opacity": 0.4,
-"width": 1
-},
-"move": {
-"enable": true,
-"speed": 6,
-"direction": "none",
-"random": false,
-"straight": false,
-"out_mode": "out",
-"bounce": false,
-"attract": {
-"enable": false,
-"rotateX": 600,
-"rotateY": 1200
-}
-}
-},
-"interactivity": {
-"detect_on": "canvas",
-"events": {
-"onhover": {
-"enable": true,
-"mode": "repulse"
-},
-"onclick": {
-"enable": true,
-"mode": "push"
-},
-"resize": true
-},
-"modes": {
-"grab": {
-"distance": 400,
-"line_linked": {
-"opacity": 1
-}
-},
-"bubble": {
-"distance": 400,
-"size": 40,
-"duration": 2,
-"opacity": 8,
-"speed": 3
-},
-"repulse": {
-"distance": 200,
-"duration": 0.4
-},
-"push": {
-"particles_nb": 4
-},
-"remove": {
-"particles_nb": 2
-}
-}
-},
-"retina_detect": true
-});
-const progress = document.querySelector('.progress');
-const percentage = document.querySelector('.percentage');
-const particles = document.querySelector('.particles');
-let currentProgress = 0;
-
-function updateLoader() {
-if (currentProgress < 100) {
-    currentProgress += Math.random() * 4 + 1; // افزایش سریع‌تر و تصادفی
-currentProgress = Math.min(currentProgress, 100);
-progress.style.width = `${currentProgress}%`;
-percentage.textContent = `${Math.round(currentProgress)}%`;
-setTimeout(updateLoader, 60); // زمان کمتر بین به‌روزرسانی‌ها
-} else if (currentProgress < 100) {
-// انیمیشن نهایی برای رسیدن به 100%
-currentProgress += 0.5;
-progress.style.width = `${currentProgress}%`;
-percentage.textContent = `${Math.round(currentProgress)}%`;
-requestAnimationFrame(updateLoader);
-}
-}
-
-function createParticle() {
-const particle = document.createElement('div');
-particle.classList.add('particle');
-particle.style.width = `${Math.random() * 5 + 2}px`;
-particle.style.height = particle.style.width;
-particle.style.left = `${Math.random() * 100}%`;
-particle.style.top = `${Math.random() * 100}%`;
-particle.style.animationDuration = `${Math.random() * 2 + 2}s`;
-particles.appendChild(particle);
-
-setTimeout(() => {
-particle.remove();
-}, 5000);
-}
-
-function createParticles() {
-setInterval(createParticle, 200);
-}
-
-updateLoader();
-createParticles();
-setTimeout(() => {
-            window.location.href = "index2.html";
-        }, 4000); // 4 sc
-</script>
+<script src="script.js"></script>
 </body>
 </html>
